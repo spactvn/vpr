@@ -1,0 +1,4 @@
+[submodule "official-sc"]
+	path = official-sc
+	url = https://lnp279:glpat-Wnfr-zhJ8doDLo2Ykhv9@gitlab.com/platz-os-2022/official-sc.git
+	branch = main

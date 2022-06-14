@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "UTM Banque";
+    src: url("/fonts/UTM BanqueR.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "UTM Banque";
+    src: url("/fonts/UTM BanqueB.ttf");
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+  }
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'UTM Banque', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slick-dots li button, .slick-dots li.slick-active button {
+    width: 12px !important;
+    height: 12px !important;
+    background: white !important;
+    border-radius: 16px !important;
+  }
+  .slick-dots li button::before, .slick-dots li.slick-active button::before {
+    width: 12px;
+    height: 12px;
+    border-radius: 16px;
+    color: transparent !important;
+  }
+
+@media screen and (min-width: 768px) {
+    .slick-dots li button, .slick-dots li.slick-active button {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .slick-dots li button::before, .slick-dots li.slick-active button::before {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.slick-dots li.slick-active button::before {
+
+    background: linear-gradient(90deg, #DA9917 0.03%, #FFCF25 32%, #FFFF90 68.03%, #ECBF26 100%) !important;
+}
+
+.slick-prev:before, .slick-next:before {
+    content: none !important;
+}
+.slick-prev, .slick-next {
+    width: 44px !important;
+    height: 44px !important;
+}
+
+.slick-next {
+    right: -45px !important;
+}
+.slick-prev {
+    left: -45px !important;
+}

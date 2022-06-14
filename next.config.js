@@ -1,0 +1,28 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	reactStrictMode: true,
+	webpack(config) {
+		config.module.rules.push({
+			test: /\.svg$/,
+			use: ['@svgr/webpack'],
+		})
+
+		return config
+	},
+	env: {
+		NEXT_BINANCE_CHAIN_ID: process.env.NEXT_BINANCE_CHAIN_ID,
+		NEXT_ICO_ROUND_ID: process.env.NEXT_ICO_ROUND_ID,
+		NEXT_CONTRACT_ADDRESS_AKASHIC: process.env.NEXT_CONTRACT_ADDRESS_AKASHIC,
+		NEXT_CONTRACT_ADDRESS_BUSD: process.env.NEXT_CONTRACT_ADDRESS_BUSD,
+		NEXT_CONTRACT_ADDRESS_ASSET_1155: process.env.NEXT_CONTRACT_ADDRESS_ASSET_1155,
+		NEXT_CONTRACT_ADDRESS_FARMING: process.env.NEXT_CONTRACT_ADDRESS_FARMING,
+		NEXT_CONTRACT_ADDRESS_BOX: process.env.NEXT_CONTRACT_ADDRESS_BOX,
+		NEXT_CONTRACT_ADDRESS_MARKETPLACE: process.env.NEXT_CONTRACT_ADDRESS_MARKETPLACE,
+		NEXT_CONTRACT_ADDRESS_AIRDROP: process.env.NEXT_CONTRACT_ADDRESS_AIRDROP,
+		NEXT_CONTRACT_ADDRESS_ICO: process.env.NEXT_CONTRACT_ADDRESS_ICO,
+		NEXT_CONTRACT_ADDRESS_VPR: process.env.NEXT_CONTRACT_ADDRESS_VPR,
+		NEXT_API_ENDPOINT: process.env.NEXT_API_ENDPOINT,
+	}
+}
+
+module.exports = nextConfig
